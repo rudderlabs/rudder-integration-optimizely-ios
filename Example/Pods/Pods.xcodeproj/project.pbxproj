@@ -1,0 +1,803 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		01BBEC809ED2C47DCD4DD782D3A6AA93 /* Rudder-Optimizely-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 47F8B20F709ABFAE785CA5B026F92EE4 /* Rudder-Optimizely-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0CC2BCD190FD70EA5CFACE0A81938EFB /* Pods-Rudder-Optimizely_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8989DB69C987513865353AD587A386FC /* Pods-Rudder-Optimizely_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		11B004AD24C859CC00721A5E /* RudderOptimizelyIntegration.h in Headers */ = {isa = PBXBuildFile; fileRef = 11B004AB24C859CC00721A5E /* RudderOptimizelyIntegration.h */; };
+		11B004AE24C859CC00721A5E /* RudderOptimizelyIntegration.h in Headers */ = {isa = PBXBuildFile; fileRef = 11B004AB24C859CC00721A5E /* RudderOptimizelyIntegration.h */; };
+		11B004AF24C859CC00721A5E /* RudderOptimizelyIntegration.h in Headers */ = {isa = PBXBuildFile; fileRef = 11B004AB24C859CC00721A5E /* RudderOptimizelyIntegration.h */; };
+		11B004B024C859CC00721A5E /* RudderOptimizelyIntegration.m in Sources */ = {isa = PBXBuildFile; fileRef = 11B004AC24C859CC00721A5E /* RudderOptimizelyIntegration.m */; };
+		11B004B124C859CC00721A5E /* RudderOptimizelyIntegration.m in Sources */ = {isa = PBXBuildFile; fileRef = 11B004AC24C859CC00721A5E /* RudderOptimizelyIntegration.m */; };
+		11B004B224C859CC00721A5E /* RudderOptimizelyIntegration.m in Sources */ = {isa = PBXBuildFile; fileRef = 11B004AC24C859CC00721A5E /* RudderOptimizelyIntegration.m */; };
+		11B004B524C859F100721A5E /* RudderOptimizelyFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 11B004B324C859F100721A5E /* RudderOptimizelyFactory.h */; };
+		11B004B624C859F100721A5E /* RudderOptimizelyFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 11B004B324C859F100721A5E /* RudderOptimizelyFactory.h */; };
+		11B004B724C859F100721A5E /* RudderOptimizelyFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 11B004B324C859F100721A5E /* RudderOptimizelyFactory.h */; };
+		11B004B824C859F100721A5E /* RudderOptimizelyFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 11B004B424C859F100721A5E /* RudderOptimizelyFactory.m */; };
+		11B004B924C859F100721A5E /* RudderOptimizelyFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 11B004B424C859F100721A5E /* RudderOptimizelyFactory.m */; };
+		11B004BA24C859F100721A5E /* RudderOptimizelyFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 11B004B424C859F100721A5E /* RudderOptimizelyFactory.m */; };
+		5DB50B6A9D0858DC3F63C4EAAB24C73B /* Rudder-Optimizely-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6615FC1EE389E9DBD4F06DB6D0E400EA /* Rudder-Optimizely-dummy.m */; };
+		7EA133E9FB1F1A37FA8E71A8A56D4001 /* Pods-Rudder-Optimizely_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 57F883D4E5264FF7B227CF29CCED40ED /* Pods-Rudder-Optimizely_Example-dummy.m */; };
+		9E90B45FCABB7431C428EE35F99413F0 /* ReplaceMe.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EAAEEDE4941720043F2F89F490950FF /* ReplaceMe.m */; };
+		9E999610DB9DD81E02D6C3C8DA9E8ADF /* Pods-Rudder-Optimizely_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 276C1CBC41583E291221987494FD7506 /* Pods-Rudder-Optimizely_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B42A05B7489E1AD2B33067381FFCF7E5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		BEC8E9F85623672053CF30521D43FC4D /* Pods-Rudder-Optimizely_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DD2D71A51B3994624275AB2081B8CA5 /* Pods-Rudder-Optimizely_Tests-dummy.m */; };
+		CB59C072276948D12770D643AA9F157E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		F4C141BF2EC040A22187DFA8D0A11AE7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		383F789CDA1DBB90661C9773D01DAED2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F2585E700E5AFABEFC6243CC82A1BEB3;
+			remoteInfo = "Rudder-Optimizely";
+		};
+		5F9B68DDEE799111197193DD3290BBE1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DF05D13D1A110EB24C6A82DE0CA8D7BA;
+			remoteInfo = "Pods-Rudder-Optimizely_Example";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		060E2AA5887D85552AB9932022DD824E /* Rudder-Optimizely-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Rudder-Optimizely-prefix.pch"; sourceTree = "<group>"; };
+		0BE851C9E12EB17138F9744E73873CDA /* Pods-Rudder-Optimizely_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Rudder-Optimizely_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		0FE29E9F6441726591136A6A1C935FC9 /* Pods-Rudder-Optimizely_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Rudder-Optimizely_Example-frameworks.sh"; sourceTree = "<group>"; };
+		1028D13132C1DEF0103102D6B123B938 /* Rudder-Optimizely.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Rudder-Optimizely.release.xcconfig"; sourceTree = "<group>"; };
+		11B004AB24C859CC00721A5E /* RudderOptimizelyIntegration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RudderOptimizelyIntegration.h; sourceTree = "<group>"; };
+		11B004AC24C859CC00721A5E /* RudderOptimizelyIntegration.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RudderOptimizelyIntegration.m; sourceTree = "<group>"; };
+		11B004B324C859F100721A5E /* RudderOptimizelyFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RudderOptimizelyFactory.h; sourceTree = "<group>"; };
+		11B004B424C859F100721A5E /* RudderOptimizelyFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RudderOptimizelyFactory.m; sourceTree = "<group>"; };
+		133EE5A875C3593ABE09D0CDEDCB0253 /* Pods-Rudder-Optimizely_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Rudder-Optimizely_Tests.modulemap"; sourceTree = "<group>"; };
+		16FAF57B8AB1AF589FE8F0ECDD63B3D8 /* Pods-Rudder-Optimizely_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Rudder-Optimizely_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		276C1CBC41583E291221987494FD7506 /* Pods-Rudder-Optimizely_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Rudder-Optimizely_Example-umbrella.h"; sourceTree = "<group>"; };
+		2DD2D71A51B3994624275AB2081B8CA5 /* Pods-Rudder-Optimizely_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Rudder-Optimizely_Tests-dummy.m"; sourceTree = "<group>"; };
+		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		3D617A6209AC42A989E0BA8194712661 /* Rudder-Optimizely.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Rudder-Optimizely.modulemap"; sourceTree = "<group>"; };
+		47F8B20F709ABFAE785CA5B026F92EE4 /* Rudder-Optimizely-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Rudder-Optimizely-umbrella.h"; sourceTree = "<group>"; };
+		48F9D68C60F0A1F7375DBC10A6CAB904 /* Rudder-Optimizely.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Rudder-Optimizely.debug.xcconfig"; sourceTree = "<group>"; };
+		4EAAEEDE4941720043F2F89F490950FF /* ReplaceMe.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ReplaceMe.m; path = "Rudder-Optimizely/Classes/ReplaceMe.m"; sourceTree = "<group>"; };
+		54E91089D03004DB3DBAF5E5A643E9BC /* Rudder_Optimizely.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Rudder_Optimizely.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		57F883D4E5264FF7B227CF29CCED40ED /* Pods-Rudder-Optimizely_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Rudder-Optimizely_Example-dummy.m"; sourceTree = "<group>"; };
+		59FEAC7AB95B8CE7E5A954FD841FB065 /* Rudder-Optimizely.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = "Rudder-Optimizely.podspec"; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		6615FC1EE389E9DBD4F06DB6D0E400EA /* Rudder-Optimizely-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Rudder-Optimizely-dummy.m"; sourceTree = "<group>"; };
+		6B9742C16A22669DEF5B3CB78B567466 /* Pods-Rudder-Optimizely_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Rudder-Optimizely_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		873E01CFA213C1F9E55E43D00FD5ECBB /* Pods-Rudder-Optimizely_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Rudder-Optimizely_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		8989DB69C987513865353AD587A386FC /* Pods-Rudder-Optimizely_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Rudder-Optimizely_Tests-umbrella.h"; sourceTree = "<group>"; };
+		8FE4725C357AE1DD71F64711BE224C05 /* Pods-Rudder-Optimizely_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Rudder-Optimizely_Example.release.xcconfig"; sourceTree = "<group>"; };
+		901BAF5460B1EAEAF06C18E01F8FFEB8 /* Pods-Rudder-Optimizely_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Rudder-Optimizely_Tests-Info.plist"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A59F52624C19D2B12034F1F758A5E0D1 /* Rudder-Optimizely-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Rudder-Optimizely-Info.plist"; sourceTree = "<group>"; };
+		ADF9DB9BDAFF2002F323F4AA9E5FD1D8 /* Pods-Rudder-Optimizely_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Rudder-Optimizely_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		B0BEAD62A3BC7A8F791C46CF5D520085 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		BBF7F76F160CF6A11FC773FDC836BBA4 /* Pods_Rudder_Optimizely_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rudder_Optimizely_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6303938CC073051D574FE2BABF023C9 /* Pods-Rudder-Optimizely_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Rudder-Optimizely_Example-Info.plist"; sourceTree = "<group>"; };
+		D1CE253F960C9E414269C812B4D38391 /* Pods-Rudder-Optimizely_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Rudder-Optimizely_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		D345A91C5A41FAF4884BC9B71073C6C2 /* Pods_Rudder_Optimizely_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rudder_Optimizely_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC5E1AB694E33907F711567CEBE0C164 /* Pods-Rudder-Optimizely_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Rudder-Optimizely_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		E25B3CB1822AF74F7A86F4E71E7AB70F /* Pods-Rudder-Optimizely_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Rudder-Optimizely_Example.modulemap"; sourceTree = "<group>"; };
+		F38528658A3A7F4373C6866C432E2A1F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0A5AE6C81138533D6D812E8DDDCC41F1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4C141BF2EC040A22187DFA8D0A11AE7 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0A977FC28E7C773E20B7B9292D558264 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB59C072276948D12770D643AA9F157E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9541AFB963BFB05ABDD7BE7FE86324B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B42A05B7489E1AD2B33067381FFCF7E5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0A121DE160FD3E580AAC83124983548B /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				435268E2200F0E77C079CEAE4D2D9AB9 /* Rudder-Optimizely */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		435268E2200F0E77C079CEAE4D2D9AB9 /* Rudder-Optimizely */ = {
+			isa = PBXGroup;
+			children = (
+				11B004AB24C859CC00721A5E /* RudderOptimizelyIntegration.h */,
+				11B004AC24C859CC00721A5E /* RudderOptimizelyIntegration.m */,
+				11B004B324C859F100721A5E /* RudderOptimizelyFactory.h */,
+				11B004B424C859F100721A5E /* RudderOptimizelyFactory.m */,
+				4EAAEEDE4941720043F2F89F490950FF /* ReplaceMe.m */,
+				C271DEC717104B33041EE291726D9319 /* Pod */,
+				BCF9C1A6532C11D5C4403128BFB4C350 /* Support Files */,
+			);
+			name = "Rudder-Optimizely";
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		64039B3D8256F37C72877635E652BC3B /* Pods-Rudder-Optimizely_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				133EE5A875C3593ABE09D0CDEDCB0253 /* Pods-Rudder-Optimizely_Tests.modulemap */,
+				16FAF57B8AB1AF589FE8F0ECDD63B3D8 /* Pods-Rudder-Optimizely_Tests-acknowledgements.markdown */,
+				ADF9DB9BDAFF2002F323F4AA9E5FD1D8 /* Pods-Rudder-Optimizely_Tests-acknowledgements.plist */,
+				2DD2D71A51B3994624275AB2081B8CA5 /* Pods-Rudder-Optimizely_Tests-dummy.m */,
+				901BAF5460B1EAEAF06C18E01F8FFEB8 /* Pods-Rudder-Optimizely_Tests-Info.plist */,
+				8989DB69C987513865353AD587A386FC /* Pods-Rudder-Optimizely_Tests-umbrella.h */,
+				0BE851C9E12EB17138F9744E73873CDA /* Pods-Rudder-Optimizely_Tests.debug.xcconfig */,
+				6B9742C16A22669DEF5B3CB78B567466 /* Pods-Rudder-Optimizely_Tests.release.xcconfig */,
+			);
+			name = "Pods-Rudder-Optimizely_Tests";
+			path = "Target Support Files/Pods-Rudder-Optimizely_Tests";
+			sourceTree = "<group>";
+		};
+		6953A1BEA9AEF73404A0CA4118B76BC0 /* Pods-Rudder-Optimizely_Example */ = {
+			isa = PBXGroup;
+			children = (
+				E25B3CB1822AF74F7A86F4E71E7AB70F /* Pods-Rudder-Optimizely_Example.modulemap */,
+				DC5E1AB694E33907F711567CEBE0C164 /* Pods-Rudder-Optimizely_Example-acknowledgements.markdown */,
+				D1CE253F960C9E414269C812B4D38391 /* Pods-Rudder-Optimizely_Example-acknowledgements.plist */,
+				57F883D4E5264FF7B227CF29CCED40ED /* Pods-Rudder-Optimizely_Example-dummy.m */,
+				0FE29E9F6441726591136A6A1C935FC9 /* Pods-Rudder-Optimizely_Example-frameworks.sh */,
+				C6303938CC073051D574FE2BABF023C9 /* Pods-Rudder-Optimizely_Example-Info.plist */,
+				276C1CBC41583E291221987494FD7506 /* Pods-Rudder-Optimizely_Example-umbrella.h */,
+				873E01CFA213C1F9E55E43D00FD5ECBB /* Pods-Rudder-Optimizely_Example.debug.xcconfig */,
+				8FE4725C357AE1DD71F64711BE224C05 /* Pods-Rudder-Optimizely_Example.release.xcconfig */,
+			);
+			name = "Pods-Rudder-Optimizely_Example";
+			path = "Target Support Files/Pods-Rudder-Optimizely_Example";
+			sourceTree = "<group>";
+		};
+		AE86105BEA9003031A49AC5EBAA26013 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D345A91C5A41FAF4884BC9B71073C6C2 /* Pods_Rudder_Optimizely_Example.framework */,
+				BBF7F76F160CF6A11FC773FDC836BBA4 /* Pods_Rudder_Optimizely_Tests.framework */,
+				54E91089D03004DB3DBAF5E5A643E9BC /* Rudder_Optimizely.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BCF9C1A6532C11D5C4403128BFB4C350 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				3D617A6209AC42A989E0BA8194712661 /* Rudder-Optimizely.modulemap */,
+				6615FC1EE389E9DBD4F06DB6D0E400EA /* Rudder-Optimizely-dummy.m */,
+				A59F52624C19D2B12034F1F758A5E0D1 /* Rudder-Optimizely-Info.plist */,
+				060E2AA5887D85552AB9932022DD824E /* Rudder-Optimizely-prefix.pch */,
+				47F8B20F709ABFAE785CA5B026F92EE4 /* Rudder-Optimizely-umbrella.h */,
+				48F9D68C60F0A1F7375DBC10A6CAB904 /* Rudder-Optimizely.debug.xcconfig */,
+				1028D13132C1DEF0103102D6B123B938 /* Rudder-Optimizely.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/Rudder-Optimizely";
+			sourceTree = "<group>";
+		};
+		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		C271DEC717104B33041EE291726D9319 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				F38528658A3A7F4373C6866C432E2A1F /* LICENSE */,
+				B0BEAD62A3BC7A8F791C46CF5D520085 /* README.md */,
+				59FEAC7AB95B8CE7E5A954FD841FB065 /* Rudder-Optimizely.podspec */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				0A121DE160FD3E580AAC83124983548B /* Development Pods */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				AE86105BEA9003031A49AC5EBAA26013 /* Products */,
+				DE93E0F51A24251040266BD7A8001825 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C0834CEBB1379A84116EF29F93051C60 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DE93E0F51A24251040266BD7A8001825 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				6953A1BEA9AEF73404A0CA4118B76BC0 /* Pods-Rudder-Optimizely_Example */,
+				64039B3D8256F37C72877635E652BC3B /* Pods-Rudder-Optimizely_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		04234ECCFB8632C4BB608F57555C7C06 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11B004B524C859F100721A5E /* RudderOptimizelyFactory.h in Headers */,
+				9E999610DB9DD81E02D6C3C8DA9E8ADF /* Pods-Rudder-Optimizely_Example-umbrella.h in Headers */,
+				11B004AD24C859CC00721A5E /* RudderOptimizelyIntegration.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4394F25A08112EAC615EDEF11E7C41E1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11B004B624C859F100721A5E /* RudderOptimizelyFactory.h in Headers */,
+				0CC2BCD190FD70EA5CFACE0A81938EFB /* Pods-Rudder-Optimizely_Tests-umbrella.h in Headers */,
+				11B004AE24C859CC00721A5E /* RudderOptimizelyIntegration.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		939B6C2631DAD0BF32C9E4BF0F3342A3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11B004B724C859F100721A5E /* RudderOptimizelyFactory.h in Headers */,
+				01BBEC809ED2C47DCD4DD782D3A6AA93 /* Rudder-Optimizely-umbrella.h in Headers */,
+				11B004AF24C859CC00721A5E /* RudderOptimizelyIntegration.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		37ADBEC112F4B9372C93860C43AFB5C9 /* Pods-Rudder-Optimizely_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF17C54A19BE4B60C43E47040FA409E6 /* Build configuration list for PBXNativeTarget "Pods-Rudder-Optimizely_Tests" */;
+			buildPhases = (
+				4394F25A08112EAC615EDEF11E7C41E1 /* Headers */,
+				6B3D7A2F259664C288FD08E60AD7E4C2 /* Sources */,
+				0A5AE6C81138533D6D812E8DDDCC41F1 /* Frameworks */,
+				210A5353A8DFBD94E2C3BB1D17DD5319 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5DEC02426646769830BAF6BA9B8B5AB4 /* PBXTargetDependency */,
+			);
+			name = "Pods-Rudder-Optimizely_Tests";
+			productName = "Pods-Rudder-Optimizely_Tests";
+			productReference = BBF7F76F160CF6A11FC773FDC836BBA4 /* Pods_Rudder_Optimizely_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		DF05D13D1A110EB24C6A82DE0CA8D7BA /* Pods-Rudder-Optimizely_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0A072748583E0BA8E5CFBB2883B3DF9B /* Build configuration list for PBXNativeTarget "Pods-Rudder-Optimizely_Example" */;
+			buildPhases = (
+				04234ECCFB8632C4BB608F57555C7C06 /* Headers */,
+				DB58E40C3D5BD90B91F7027322025A3D /* Sources */,
+				9541AFB963BFB05ABDD7BE7FE86324B7 /* Frameworks */,
+				25976E9A525F59343573ACE28A03DC04 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DF0F28480ECB0E7F5909FED5F6FD1895 /* PBXTargetDependency */,
+			);
+			name = "Pods-Rudder-Optimizely_Example";
+			productName = "Pods-Rudder-Optimizely_Example";
+			productReference = D345A91C5A41FAF4884BC9B71073C6C2 /* Pods_Rudder_Optimizely_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F2585E700E5AFABEFC6243CC82A1BEB3 /* Rudder-Optimizely */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2539EA8C76538991AFA257A5AC3C2BE3 /* Build configuration list for PBXNativeTarget "Rudder-Optimizely" */;
+			buildPhases = (
+				939B6C2631DAD0BF32C9E4BF0F3342A3 /* Headers */,
+				C423998FB9824186BBF0CCBC81B66E79 /* Sources */,
+				0A977FC28E7C773E20B7B9292D558264 /* Frameworks */,
+				096CDDA417C9AC400D98C015ADF5026A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Rudder-Optimizely";
+			productName = "Rudder-Optimizely";
+			productReference = 54E91089D03004DB3DBAF5E5A643E9BC /* Rudder_Optimizely.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = AE86105BEA9003031A49AC5EBAA26013 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DF05D13D1A110EB24C6A82DE0CA8D7BA /* Pods-Rudder-Optimizely_Example */,
+				37ADBEC112F4B9372C93860C43AFB5C9 /* Pods-Rudder-Optimizely_Tests */,
+				F2585E700E5AFABEFC6243CC82A1BEB3 /* Rudder-Optimizely */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		096CDDA417C9AC400D98C015ADF5026A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		210A5353A8DFBD94E2C3BB1D17DD5319 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		25976E9A525F59343573ACE28A03DC04 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6B3D7A2F259664C288FD08E60AD7E4C2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11B004B924C859F100721A5E /* RudderOptimizelyFactory.m in Sources */,
+				11B004B124C859CC00721A5E /* RudderOptimizelyIntegration.m in Sources */,
+				BEC8E9F85623672053CF30521D43FC4D /* Pods-Rudder-Optimizely_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C423998FB9824186BBF0CCBC81B66E79 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11B004BA24C859F100721A5E /* RudderOptimizelyFactory.m in Sources */,
+				9E90B45FCABB7431C428EE35F99413F0 /* ReplaceMe.m in Sources */,
+				5DB50B6A9D0858DC3F63C4EAAB24C73B /* Rudder-Optimizely-dummy.m in Sources */,
+				11B004B224C859CC00721A5E /* RudderOptimizelyIntegration.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB58E40C3D5BD90B91F7027322025A3D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11B004B824C859F100721A5E /* RudderOptimizelyFactory.m in Sources */,
+				11B004B024C859CC00721A5E /* RudderOptimizelyIntegration.m in Sources */,
+				7EA133E9FB1F1A37FA8E71A8A56D4001 /* Pods-Rudder-Optimizely_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5DEC02426646769830BAF6BA9B8B5AB4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-Rudder-Optimizely_Example";
+			target = DF05D13D1A110EB24C6A82DE0CA8D7BA /* Pods-Rudder-Optimizely_Example */;
+			targetProxy = 5F9B68DDEE799111197193DD3290BBE1 /* PBXContainerItemProxy */;
+		};
+		DF0F28480ECB0E7F5909FED5F6FD1895 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Rudder-Optimizely";
+			target = F2585E700E5AFABEFC6243CC82A1BEB3 /* Rudder-Optimizely */;
+			targetProxy = 383F789CDA1DBB90661C9773D01DAED2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		365F5EA1816903A50D7BA6849953EFAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8FE4725C357AE1DD71F64711BE224C05 /* Pods-Rudder-Optimizely_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Rudder-Optimizely_Example/Pods-Rudder-Optimizely_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Rudder-Optimizely_Example/Pods-Rudder-Optimizely_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		389AEBD199803AB65188629EE8A332E7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 873E01CFA213C1F9E55E43D00FD5ECBB /* Pods-Rudder-Optimizely_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Rudder-Optimizely_Example/Pods-Rudder-Optimizely_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Rudder-Optimizely_Example/Pods-Rudder-Optimizely_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		4BE66A09A74FD25164AAB3C2645B9B93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		4EC5A6349340FEE0B192F4DB73385966 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1028D13132C1DEF0103102D6B123B938 /* Rudder-Optimizely.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Rudder-Optimizely/Rudder-Optimizely-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Rudder-Optimizely/Rudder-Optimizely-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Rudder-Optimizely/Rudder-Optimizely.modulemap";
+				PRODUCT_MODULE_NAME = Rudder_Optimizely;
+				PRODUCT_NAME = Rudder_Optimizely;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		53ECACB28BA9C5F46EFD281ADCFFBE34 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0BE851C9E12EB17138F9744E73873CDA /* Pods-Rudder-Optimizely_Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Rudder-Optimizely_Tests/Pods-Rudder-Optimizely_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Rudder-Optimizely_Tests/Pods-Rudder-Optimizely_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		74381A4053093BB8DFE43832BB930F73 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6B9742C16A22669DEF5B3CB78B567466 /* Pods-Rudder-Optimizely_Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Rudder-Optimizely_Tests/Pods-Rudder-Optimizely_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Rudder-Optimizely_Tests/Pods-Rudder-Optimizely_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		7EF7227D9B20A1D549000096ACCB23D7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		B69C4B574D56171D26A65F4667DE88EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 48F9D68C60F0A1F7375DBC10A6CAB904 /* Rudder-Optimizely.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Rudder-Optimizely/Rudder-Optimizely-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Rudder-Optimizely/Rudder-Optimizely-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Rudder-Optimizely/Rudder-Optimizely.modulemap";
+				PRODUCT_MODULE_NAME = Rudder_Optimizely;
+				PRODUCT_NAME = Rudder_Optimizely;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0A072748583E0BA8E5CFBB2883B3DF9B /* Build configuration list for PBXNativeTarget "Pods-Rudder-Optimizely_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				389AEBD199803AB65188629EE8A332E7 /* Debug */,
+				365F5EA1816903A50D7BA6849953EFAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2539EA8C76538991AFA257A5AC3C2BE3 /* Build configuration list for PBXNativeTarget "Rudder-Optimizely" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B69C4B574D56171D26A65F4667DE88EC /* Debug */,
+				4EC5A6349340FEE0B192F4DB73385966 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7EF7227D9B20A1D549000096ACCB23D7 /* Debug */,
+				4BE66A09A74FD25164AAB3C2645B9B93 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF17C54A19BE4B60C43E47040FA409E6 /* Build configuration list for PBXNativeTarget "Pods-Rudder-Optimizely_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				53ECACB28BA9C5F46EFD281ADCFFBE34 /* Debug */,
+				74381A4053093BB8DFE43832BB930F73 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
