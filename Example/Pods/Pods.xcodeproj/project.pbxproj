@@ -9,18 +9,6 @@
 /* Begin PBXBuildFile section */
 		01BBEC809ED2C47DCD4DD782D3A6AA93 /* Rudder-Optimizely-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 47F8B20F709ABFAE785CA5B026F92EE4 /* Rudder-Optimizely-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0CC2BCD190FD70EA5CFACE0A81938EFB /* Pods-Rudder-Optimizely_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8989DB69C987513865353AD587A386FC /* Pods-Rudder-Optimizely_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		11B004AD24C859CC00721A5E /* RudderOptimizelyIntegration.h in Headers */ = {isa = PBXBuildFile; fileRef = 11B004AB24C859CC00721A5E /* RudderOptimizelyIntegration.h */; };
-		11B004AE24C859CC00721A5E /* RudderOptimizelyIntegration.h in Headers */ = {isa = PBXBuildFile; fileRef = 11B004AB24C859CC00721A5E /* RudderOptimizelyIntegration.h */; };
-		11B004AF24C859CC00721A5E /* RudderOptimizelyIntegration.h in Headers */ = {isa = PBXBuildFile; fileRef = 11B004AB24C859CC00721A5E /* RudderOptimizelyIntegration.h */; };
-		11B004B024C859CC00721A5E /* RudderOptimizelyIntegration.m in Sources */ = {isa = PBXBuildFile; fileRef = 11B004AC24C859CC00721A5E /* RudderOptimizelyIntegration.m */; };
-		11B004B124C859CC00721A5E /* RudderOptimizelyIntegration.m in Sources */ = {isa = PBXBuildFile; fileRef = 11B004AC24C859CC00721A5E /* RudderOptimizelyIntegration.m */; };
-		11B004B224C859CC00721A5E /* RudderOptimizelyIntegration.m in Sources */ = {isa = PBXBuildFile; fileRef = 11B004AC24C859CC00721A5E /* RudderOptimizelyIntegration.m */; };
-		11B004B524C859F100721A5E /* RudderOptimizelyFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 11B004B324C859F100721A5E /* RudderOptimizelyFactory.h */; };
-		11B004B624C859F100721A5E /* RudderOptimizelyFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 11B004B324C859F100721A5E /* RudderOptimizelyFactory.h */; };
-		11B004B724C859F100721A5E /* RudderOptimizelyFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 11B004B324C859F100721A5E /* RudderOptimizelyFactory.h */; };
-		11B004B824C859F100721A5E /* RudderOptimizelyFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 11B004B424C859F100721A5E /* RudderOptimizelyFactory.m */; };
-		11B004B924C859F100721A5E /* RudderOptimizelyFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 11B004B424C859F100721A5E /* RudderOptimizelyFactory.m */; };
-		11B004BA24C859F100721A5E /* RudderOptimizelyFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 11B004B424C859F100721A5E /* RudderOptimizelyFactory.m */; };
 		5DB50B6A9D0858DC3F63C4EAAB24C73B /* Rudder-Optimizely-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6615FC1EE389E9DBD4F06DB6D0E400EA /* Rudder-Optimizely-dummy.m */; };
 		7EA133E9FB1F1A37FA8E71A8A56D4001 /* Pods-Rudder-Optimizely_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 57F883D4E5264FF7B227CF29CCED40ED /* Pods-Rudder-Optimizely_Example-dummy.m */; };
 		9E90B45FCABB7431C428EE35F99413F0 /* ReplaceMe.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EAAEEDE4941720043F2F89F490950FF /* ReplaceMe.m */; };
@@ -53,10 +41,6 @@
 		0BE851C9E12EB17138F9744E73873CDA /* Pods-Rudder-Optimizely_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Rudder-Optimizely_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		0FE29E9F6441726591136A6A1C935FC9 /* Pods-Rudder-Optimizely_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Rudder-Optimizely_Example-frameworks.sh"; sourceTree = "<group>"; };
 		1028D13132C1DEF0103102D6B123B938 /* Rudder-Optimizely.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Rudder-Optimizely.release.xcconfig"; sourceTree = "<group>"; };
-		11B004AB24C859CC00721A5E /* RudderOptimizelyIntegration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RudderOptimizelyIntegration.h; sourceTree = "<group>"; };
-		11B004AC24C859CC00721A5E /* RudderOptimizelyIntegration.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RudderOptimizelyIntegration.m; sourceTree = "<group>"; };
-		11B004B324C859F100721A5E /* RudderOptimizelyFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RudderOptimizelyFactory.h; sourceTree = "<group>"; };
-		11B004B424C859F100721A5E /* RudderOptimizelyFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RudderOptimizelyFactory.m; sourceTree = "<group>"; };
 		133EE5A875C3593ABE09D0CDEDCB0253 /* Pods-Rudder-Optimizely_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Rudder-Optimizely_Tests.modulemap"; sourceTree = "<group>"; };
 		16FAF57B8AB1AF589FE8F0ECDD63B3D8 /* Pods-Rudder-Optimizely_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Rudder-Optimizely_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		276C1CBC41583E291221987494FD7506 /* Pods-Rudder-Optimizely_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Rudder-Optimizely_Example-umbrella.h"; sourceTree = "<group>"; };
@@ -66,26 +50,26 @@
 		47F8B20F709ABFAE785CA5B026F92EE4 /* Rudder-Optimizely-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Rudder-Optimizely-umbrella.h"; sourceTree = "<group>"; };
 		48F9D68C60F0A1F7375DBC10A6CAB904 /* Rudder-Optimizely.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Rudder-Optimizely.debug.xcconfig"; sourceTree = "<group>"; };
 		4EAAEEDE4941720043F2F89F490950FF /* ReplaceMe.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ReplaceMe.m; path = "Rudder-Optimizely/Classes/ReplaceMe.m"; sourceTree = "<group>"; };
-		54E91089D03004DB3DBAF5E5A643E9BC /* Rudder_Optimizely.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Rudder_Optimizely.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		54E91089D03004DB3DBAF5E5A643E9BC /* Rudder_Optimizely.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Rudder_Optimizely.framework; path = "Rudder-Optimizely.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		57F883D4E5264FF7B227CF29CCED40ED /* Pods-Rudder-Optimizely_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Rudder-Optimizely_Example-dummy.m"; sourceTree = "<group>"; };
-		59FEAC7AB95B8CE7E5A954FD841FB065 /* Rudder-Optimizely.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = "Rudder-Optimizely.podspec"; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		59FEAC7AB95B8CE7E5A954FD841FB065 /* Rudder-Optimizely.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = "Rudder-Optimizely.podspec"; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		6615FC1EE389E9DBD4F06DB6D0E400EA /* Rudder-Optimizely-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Rudder-Optimizely-dummy.m"; sourceTree = "<group>"; };
 		6B9742C16A22669DEF5B3CB78B567466 /* Pods-Rudder-Optimizely_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Rudder-Optimizely_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		873E01CFA213C1F9E55E43D00FD5ECBB /* Pods-Rudder-Optimizely_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Rudder-Optimizely_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		8989DB69C987513865353AD587A386FC /* Pods-Rudder-Optimizely_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Rudder-Optimizely_Tests-umbrella.h"; sourceTree = "<group>"; };
 		8FE4725C357AE1DD71F64711BE224C05 /* Pods-Rudder-Optimizely_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Rudder-Optimizely_Example.release.xcconfig"; sourceTree = "<group>"; };
 		901BAF5460B1EAEAF06C18E01F8FFEB8 /* Pods-Rudder-Optimizely_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Rudder-Optimizely_Tests-Info.plist"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A59F52624C19D2B12034F1F758A5E0D1 /* Rudder-Optimizely-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Rudder-Optimizely-Info.plist"; sourceTree = "<group>"; };
 		ADF9DB9BDAFF2002F323F4AA9E5FD1D8 /* Pods-Rudder-Optimizely_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Rudder-Optimizely_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		B0BEAD62A3BC7A8F791C46CF5D520085 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		BBF7F76F160CF6A11FC773FDC836BBA4 /* Pods_Rudder_Optimizely_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rudder_Optimizely_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0BEAD62A3BC7A8F791C46CF5D520085 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		BBF7F76F160CF6A11FC773FDC836BBA4 /* Pods_Rudder_Optimizely_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Rudder_Optimizely_Tests.framework; path = "Pods-Rudder-Optimizely_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6303938CC073051D574FE2BABF023C9 /* Pods-Rudder-Optimizely_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Rudder-Optimizely_Example-Info.plist"; sourceTree = "<group>"; };
 		D1CE253F960C9E414269C812B4D38391 /* Pods-Rudder-Optimizely_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Rudder-Optimizely_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		D345A91C5A41FAF4884BC9B71073C6C2 /* Pods_Rudder_Optimizely_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rudder_Optimizely_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D345A91C5A41FAF4884BC9B71073C6C2 /* Pods_Rudder_Optimizely_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Rudder_Optimizely_Example.framework; path = "Pods-Rudder-Optimizely_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC5E1AB694E33907F711567CEBE0C164 /* Pods-Rudder-Optimizely_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Rudder-Optimizely_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		E25B3CB1822AF74F7A86F4E71E7AB70F /* Pods-Rudder-Optimizely_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Rudder-Optimizely_Example.modulemap"; sourceTree = "<group>"; };
-		F38528658A3A7F4373C6866C432E2A1F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		F38528658A3A7F4373C6866C432E2A1F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,10 +111,6 @@
 		435268E2200F0E77C079CEAE4D2D9AB9 /* Rudder-Optimizely */ = {
 			isa = PBXGroup;
 			children = (
-				11B004AB24C859CC00721A5E /* RudderOptimizelyIntegration.h */,
-				11B004AC24C859CC00721A5E /* RudderOptimizelyIntegration.m */,
-				11B004B324C859F100721A5E /* RudderOptimizelyFactory.h */,
-				11B004B424C859F100721A5E /* RudderOptimizelyFactory.m */,
 				4EAAEEDE4941720043F2F89F490950FF /* ReplaceMe.m */,
 				C271DEC717104B33041EE291726D9319 /* Pod */,
 				BCF9C1A6532C11D5C4403128BFB4C350 /* Support Files */,
@@ -250,9 +230,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				11B004B524C859F100721A5E /* RudderOptimizelyFactory.h in Headers */,
 				9E999610DB9DD81E02D6C3C8DA9E8ADF /* Pods-Rudder-Optimizely_Example-umbrella.h in Headers */,
-				11B004AD24C859CC00721A5E /* RudderOptimizelyIntegration.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,9 +238,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				11B004B624C859F100721A5E /* RudderOptimizelyFactory.h in Headers */,
 				0CC2BCD190FD70EA5CFACE0A81938EFB /* Pods-Rudder-Optimizely_Tests-umbrella.h in Headers */,
-				11B004AE24C859CC00721A5E /* RudderOptimizelyIntegration.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,9 +246,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				11B004B724C859F100721A5E /* RudderOptimizelyFactory.h in Headers */,
 				01BBEC809ED2C47DCD4DD782D3A6AA93 /* Rudder-Optimizely-umbrella.h in Headers */,
-				11B004AF24C859CC00721A5E /* RudderOptimizelyIntegration.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,8 +367,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				11B004B924C859F100721A5E /* RudderOptimizelyFactory.m in Sources */,
-				11B004B124C859CC00721A5E /* RudderOptimizelyIntegration.m in Sources */,
 				BEC8E9F85623672053CF30521D43FC4D /* Pods-Rudder-Optimizely_Tests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -403,10 +375,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				11B004BA24C859F100721A5E /* RudderOptimizelyFactory.m in Sources */,
 				9E90B45FCABB7431C428EE35F99413F0 /* ReplaceMe.m in Sources */,
 				5DB50B6A9D0858DC3F63C4EAAB24C73B /* Rudder-Optimizely-dummy.m in Sources */,
-				11B004B224C859CC00721A5E /* RudderOptimizelyIntegration.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,8 +384,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				11B004B824C859F100721A5E /* RudderOptimizelyFactory.m in Sources */,
-				11B004B024C859CC00721A5E /* RudderOptimizelyIntegration.m in Sources */,
 				7EA133E9FB1F1A37FA8E71A8A56D4001 /* Pods-Rudder-Optimizely_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -558,7 +526,8 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
