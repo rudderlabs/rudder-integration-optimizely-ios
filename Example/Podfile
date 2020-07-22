@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '8.0'
+
+target 'Rudder-Optimizely_Example' do
+  pod 'Rudder-Optimizely', :path => '../'
+
+  target 'Rudder-Optimizely_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
