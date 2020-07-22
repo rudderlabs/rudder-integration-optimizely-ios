@@ -40,8 +40,8 @@
 		334E0C5C4BEEFFE76091DF96 /* Pods_Rudder_Optimizely_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rudder_Optimizely_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		38029A9FE8A5618C2E49263F /* Pods_Rudder_Optimizely_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rudder_Optimizely_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C1D92439341545C96069C16 /* Pods-Rudder-Optimizely_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rudder-Optimizely_Tests.debug.xcconfig"; path = "Target Support Files/Pods-Rudder-Optimizely_Tests/Pods-Rudder-Optimizely_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		3FF40E3204E3F4CF5CC84EAE /* Rudder-Optimizely.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = "Rudder-Optimizely.podspec"; path = "../Rudder-Optimizely.podspec"; sourceTree = "<group>"; };
-		44316FFECA27E874807A59C0 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		3FF40E3204E3F4CF5CC84EAE /* Rudder-Optimizely.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = "Rudder-Optimizely.podspec"; path = "../Rudder-Optimizely.podspec"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		44316FFECA27E874807A59C0 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* Rudder-Optimizely_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rudder-Optimizely_Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -65,7 +65,7 @@
 		83CA67B4AFF3FE25400DE355 /* Pods-Rudder-Optimizely_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rudder-Optimizely_Example.debug.xcconfig"; path = "Target Support Files/Pods-Rudder-Optimizely_Example/Pods-Rudder-Optimizely_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		995A6942E47F70B5338FFE33 /* Pods-Rudder-Optimizely_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rudder-Optimizely_Tests.release.xcconfig"; path = "Target Support Files/Pods-Rudder-Optimizely_Tests/Pods-Rudder-Optimizely_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		9A12CEC7EB41CEDFA0547D34 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		9A12CEC7EB41CEDFA0547D34 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		E00B9F246E06075A1EE87D52 /* Pods-Rudder-Optimizely_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rudder-Optimizely_Example.release.xcconfig"; path = "Target Support Files/Pods-Rudder-Optimizely_Example/Pods-Rudder-Optimizely_Example.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -193,7 +193,6 @@
 				3C1D92439341545C96069C16 /* Pods-Rudder-Optimizely_Tests.debug.xcconfig */,
 				995A6942E47F70B5338FFE33 /* Pods-Rudder-Optimizely_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -258,6 +257,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
