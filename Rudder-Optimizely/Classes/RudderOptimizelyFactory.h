@@ -6,10 +6,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <Rudder/RudderIntegrationFactory.h>
+#import <OptimizelySDKiOS/OptimizelySDKiOS.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface RudderOptimizelyFactory : NSObject
+@interface RudderOptimizelyFactory : NSObject<RudderIntegrationFactory>
+
++ (instancetype)instanceWithOptimizely:(OPTLYManager *)optimizely;
+
+@property OPTLYManager *manager;
 
 @end
 
