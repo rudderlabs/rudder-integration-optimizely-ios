@@ -7,12 +7,95 @@
 //
 
 #import "_AppDelegate.h"
+#import <Rudder/Rudder.h>
+#import "RudderOptimizelyFactory.h"
 
 @implementation _AppDelegate
-
+static NSString *DATA_PLANE_URL = @"https://2f7a352d.ngrok.io";
+static NSString *CONTROL_PLANE_URL = @"http://api.dev.rudderlabs.com";
+static NSString *WRITE_KEY = @"1f5BEV2kneYtZ3HkuwsGjd2JeZ1";
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    OPTLYLoggerDefault *optlyLogger = [[OPTLYLoggerDefault alloc] initWithLogLevel:OptimizelyLogLevelError];
+    // Initialize an Optimizely manager
+    //    self.optlyManager = [OPTLYManager init:^(OPTLYManagerBuilder *_Nullable builder) {
+    //        builder.projectId = @"18396880524";
+    //        builder.logger = optlyLogger;
+    //
+    //    }];
+    self.optlyManager = [[OPTLYManager alloc] initWithBuilder:[OPTLYManagerBuilder  builderWithBlock:^(OPTLYManagerBuilder * _Nullable builder) {
+        builder.sdkKey = @"LwrTQEYD9yReHwogKphdt";
+        builder.logger = optlyLogger;
+    }]];
+    //    self.optlyManager =  [OPTLYManager init:^(OPTLYManagerBuilder *_Nullable builder)  {
+    //      // Load the datafile from the bundle
+    //      NSString *filePath =[[NSBundle bundleForClass:[self class]]
+    //                           pathForResource:@"https://cdn.optimizely.com/datafiles/LwrTQEYD9yhdt.json"
+    //                           ofType:@"json"];
+    //      NSString *fileContents =[NSString stringWithContentsOfFile:filePath
+    //                               encoding:NSUTF8StringEncoding
+    //                               error:nil];
+    //      NSData *jsonData = [fileContents dataUsingEncoding:NSUTF8StringEncoding];
+    //
+    //      // Set the datafile in the builder
+    //      builder.datafile = jsonData;
+    //      builder.logger = optlyLogger;
+    //
+    //    }];
+    //
+    RudderConfigBuilder *builder = [[RudderConfigBuilder alloc] init];
+    [builder withEndPointUrl:DATA_PLANE_URL];
+    [builder withConfigPlaneUrl:CONTROL_PLANE_URL];
+    [builder withFactory:[RudderOptimizelyFactory instanceWithOptimizely:self.optlyManager]];
+    
+    [builder withLoglevel:RudderLogLevelDebug];
+    [RudderClient getInstance:WRITE_KEY config:[builder build]];
+    [[RudderClient sharedInstance] track:@"Testing if malformed"];
+    [[RudderClient sharedInstance] identify:@"test"];
+    [[RudderClient sharedInstance] track:@"Product Added" properties:@{
+        @"revenue": @4000,
+    }];
+    
+    
+    
+    
+    // Test delayed initialization
+    double delayInSeconds = 10.0;
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
+    dispatch_after(popTime, dispatch_get_main_queue(), ^(void) {
+        
+        // Initialize an Optimizely client by asynchronously downloading the datafile
+        [self.optlyManager initializeWithCallback:^(NSError *_Nullable error, OPTLYClient *_Nullable client) {
+            // Activate user in an experiment
+            OPTLYVariation *variation = [client activate:@"testfeature_test" userId:@"test"];
+            [RudderLogger logDebug:@"Inside variation"];
+            if ([variation.variationKey isEqualToString:@"variation_1"]) {
+                [RudderLogger logDebug:@"Inside first if"];
+                [[RudderClient sharedInstance] identify:@"test" traits:@{
+                    @"gender" : @"male",
+                    @"company" : @"rudder",
+                    @"name" : @"ruchira"
+                }];
+                [[RudderClient sharedInstance] track:@"Product Added" properties:@{
+                    @"revenue": @8236376,
+                }];
+                [[RudderClient sharedInstance] track:@"Product Removed" properties:@{
+                    @"revenue": @2378827,
+                }];
+            } else if ([variation.variationKey isEqualToString:@"variation_2"]) {
+                [RudderLogger logDebug:@"Inside second if"];
+                [[RudderClient sharedInstance] identify:@"test"];
+                [[RudderClient sharedInstance] track:@"Product Removed" properties:@{
+                    @"revenue": @7000,
+                }];
+            } else {
+                [[RudderClient sharedInstance] track:@"No variation triggered"properties:@{
+                    @"revenue": @6000,
+                }];
+            }
+        }];
+    });
     return YES;
 }
 

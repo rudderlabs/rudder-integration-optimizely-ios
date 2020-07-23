@@ -24,10 +24,11 @@
 
 - (id)initWithOptimizely:(OPTLYManager *)manager
 {
+    [RudderLogger logDebug:@"Initializing Optimizely SDK"];
     if (self = [super init]) {
         self.manager = manager;
     }
-
+    
     return self;
 }
 
@@ -37,12 +38,12 @@
 }
 
 - (nonnull NSString *)key {
-    return @"OptimizelyFullStack";
+    return @"Optimizely Fullstack";
 }
 
 - (nonnull id<RudderIntegration>)initiate:(nonnull NSDictionary *)config client:(nonnull RudderClient *)client rudderConfig:(nonnull RudderConfig *)rudderConfig {
     [RudderLogger logDebug:@"Creating RudderIntegrationFactory"];
-   
+    
     return [[RudderOptimizelyIntegration alloc] initWithConfig:config andOptimizelyManager:self.manager withAnalytics:client withRudderConfig:rudderConfig];
 }
 @end

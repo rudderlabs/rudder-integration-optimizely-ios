@@ -7,9 +7,12 @@
 //
 
 @import UIKit;
+#import <OptimizelySDKiOS/OptimizelySDKiOS.h>
+#import <OptimizelySDKiOS/OPTLYManager.h>
 
 @interface _AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property OPTLYManager *optlyManager;
 
 @end
