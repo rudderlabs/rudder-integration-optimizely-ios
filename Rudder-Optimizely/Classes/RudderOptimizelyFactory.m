@@ -1,21 +1,21 @@
 //
-//  RudderOptimizelyFactory.m
-//  Pods-Rudder-Optimizely_Example
+//  RSOptimizelyFactory.m
+//  Pods-RS-Optimizely_Example
 //
 //  Created by Ruchira Moitra on 22/07/20.
 //
 
 #import "RudderOptimizelyFactory.h"
 #import "RudderOptimizelyIntegration.h"
-#import "RudderLogger.h"
 
-@implementation RudderOptimizelyFactory
+
+@implementation RSOptimizelyFactory
 
 
 + (instancetype)instanceWithOptimizely:(OPTLYManager *)manager
 {
     static dispatch_once_t once;
-    static RudderOptimizelyFactory *sharedInstance;
+    static RSOptimizelyFactory *sharedInstance;
     dispatch_once(&once, ^{
         sharedInstance = [[self alloc] initWithOptimizely:manager];
     });
@@ -24,14 +24,15 @@
 
 - (id)initWithOptimizely:(OPTLYManager *)manager
 {
-    [RudderLogger logDebug:@"Initializing Optimizely SDK"];
+    [RSLogger logDebug:@"Initializing Optimizely SDK"];
     if (self = [super init]) {
         self.manager = manager;
     }
-    
+
     return self;
 }
 
+// COMMENT: not required?
 + (instancetype)createWithOptimizelyManager:(NSString *)token optimizelyManager:(OPTLYManager *)manager
 {
     return [[self alloc] initWithOptimizely:manager];
@@ -41,9 +42,9 @@
     return @"Optimizely Fullstack";
 }
 
-- (nonnull id<RudderIntegration>)initiate:(nonnull NSDictionary *)config client:(nonnull RudderClient *)client rudderConfig:(nonnull RudderConfig *)rudderConfig {
-    [RudderLogger logDebug:@"Creating RudderIntegrationFactory"];
-    
-    return [[RudderOptimizelyIntegration alloc] initWithConfig:config andOptimizelyManager:self.manager withAnalytics:client withRudderConfig:rudderConfig];
+- (nonnull id<RSIntegration>)initiate:(nonnull NSDictionary *)config client:(nonnull RSClient *)client rudderConfig:(nonnull RSConfig *)rudderConfig {
+    [RSLogger logDebug:@"Creating RSIntegrationFactory"];
+
+    return [[RSOptimizelyIntegration alloc] initWithConfig:config andOptimizelyManager:self.manager withAnalytics:client withRSConfig:rudderConfig];
 }
 @end

@@ -1,6 +1,6 @@
 //
-//  RudderOptimizelyIntegration.h
-//  Pods-Rudder-Optimizely_Example
+//  RSOptimizelyIntegration.h
+//  Pods-RS-Optimizely_Example
 //
 //  Created by Ruchira Moitra on 22/07/20.
 //
@@ -11,13 +11,13 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface RudderOptimizelyIntegration : NSObject<RudderIntegration>
+@interface RSOptimizelyIntegration : NSObject<RSIntegration>
 
 @property (nonatomic) BOOL sendEvents;
 
 @property (nonatomic, strong, nonnull) NSDictionary *config;
 @property (nonatomic, strong, nonnull) OPTLYManager *manager;
-@property (nonatomic, strong, nonnull) RudderClient *client;
+@property (nonatomic, strong, nonnull) RSClient *client;
 @property (nonatomic, strong) dispatch_queue_t _Nullable backgroundQueue;
 @property (nonatomic, nullable) id observer;
 @property (nonatomic, nullable) NSString *userId;
@@ -26,7 +26,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSTimer *_Nullable flushTimer;
 
 
-- (instancetype) initWithConfig:(NSDictionary *)config andOptimizelyManager:(OPTLYManager  *)manager withAnalytics:(nonnull RudderClient *)client  withRudderConfig:(nonnull RudderConfig *)rudderConfig;
+- (instancetype) initWithConfig:(NSDictionary *)config andOptimizelyManager:(OPTLYManager  *)manager withAnalytics:(nonnull RSClient *)client  withRSConfig:(nonnull RSConfig *)rudderConfig;
 
 @end
 

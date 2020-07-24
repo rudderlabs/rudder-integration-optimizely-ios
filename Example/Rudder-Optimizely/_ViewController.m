@@ -1,6 +1,6 @@
 //
 //  _ViewController.m
-//  Rudder-Optimizely
+//  RS-Optimizely
 //
 //  Created by moitra.ruchira.26@gmail.com on 07/22/2020.
 //  Copyright (c) 2020 moitra.ruchira.26@gmail.com. All rights reserved.
@@ -18,7 +18,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    
+
 }
 
 - (void)didReceiveMemoryWarning

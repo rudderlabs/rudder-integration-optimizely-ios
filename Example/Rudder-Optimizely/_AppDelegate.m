@@ -1,6 +1,6 @@
 //
 //  _AppDelegate.m
-//  Rudder-Optimizely
+//  RS-Optimizely
 //
 //  Created by moitra.ruchira.26@gmail.com on 07/22/2020.
 //  Copyright (c) 2020 moitra.ruchira.26@gmail.com. All rights reserved.
@@ -44,53 +44,53 @@ static NSString *WRITE_KEY = @"1f5BEV2kneYtZ3HkuwsGjd2JeZ1";
     //
     //    }];
     //
-    RudderConfigBuilder *builder = [[RudderConfigBuilder alloc] init];
-    [builder withEndPointUrl:DATA_PLANE_URL];
-    [builder withConfigPlaneUrl:CONTROL_PLANE_URL];
-    [builder withFactory:[RudderOptimizelyFactory instanceWithOptimizely:self.optlyManager]];
-    
-    [builder withLoglevel:RudderLogLevelDebug];
-    [RudderClient getInstance:WRITE_KEY config:[builder build]];
-    [[RudderClient sharedInstance] track:@"Testing if malformed"];
-    [[RudderClient sharedInstance] identify:@"test"];
-    [[RudderClient sharedInstance] track:@"Product Added" properties:@{
+    RSConfigBuilder *builder = [[RSConfigBuilder alloc] init];
+    [builder withDataPlaneUrl:DATA_PLANE_URL];
+    [builder withControlPlaneUrl:CONTROL_PLANE_URL];
+    [builder withFactory:[RSOptimizelyFactory instanceWithOptimizely:self.optlyManager]];
+
+    [builder withLoglevel:RSLogLevelDebug];
+    [RSClient getInstance:WRITE_KEY config:[builder build]];
+    [[RSClient sharedInstance] track:@"Testing if malformed"];
+    [[RSClient sharedInstance] identify:@"test"];
+    [[RSClient sharedInstance] track:@"Product Added" properties:@{
         @"revenue": @4000,
     }];
-    
-    
-    
-    
+
+
+
+
     // Test delayed initialization
     double delayInSeconds = 10.0;
     dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
     dispatch_after(popTime, dispatch_get_main_queue(), ^(void) {
-        
+
         // Initialize an Optimizely client by asynchronously downloading the datafile
         [self.optlyManager initializeWithCallback:^(NSError *_Nullable error, OPTLYClient *_Nullable client) {
             // Activate user in an experiment
             OPTLYVariation *variation = [client activate:@"testfeature_test" userId:@"test"];
-            [RudderLogger logDebug:@"Inside variation"];
+            [RSLogger logDebug:@"Inside variation"];
             if ([variation.variationKey isEqualToString:@"variation_1"]) {
-                [RudderLogger logDebug:@"Inside first if"];
-                [[RudderClient sharedInstance] identify:@"test" traits:@{
+                [RSLogger logDebug:@"Inside first if"];
+                [[RSClient sharedInstance] identify:@"test" traits:@{
                     @"gender" : @"male",
                     @"company" : @"rudder",
                     @"name" : @"ruchira"
                 }];
-                [[RudderClient sharedInstance] track:@"Product Added" properties:@{
+                [[RSClient sharedInstance] track:@"Product Added" properties:@{
                     @"revenue": @8236376,
                 }];
-                [[RudderClient sharedInstance] track:@"Product Removed" properties:@{
+                [[RSClient sharedInstance] track:@"Product Removed" properties:@{
                     @"revenue": @2378827,
                 }];
             } else if ([variation.variationKey isEqualToString:@"variation_2"]) {
-                [RudderLogger logDebug:@"Inside second if"];
-                [[RudderClient sharedInstance] identify:@"test"];
-                [[RudderClient sharedInstance] track:@"Product Removed" properties:@{
+                [RSLogger logDebug:@"Inside second if"];
+                [[RSClient sharedInstance] identify:@"test"];
+                [[RSClient sharedInstance] track:@"Product Removed" properties:@{
                     @"revenue": @7000,
                 }];
             } else {
-                [[RudderClient sharedInstance] track:@"No variation triggered"properties:@{
+                [[RSClient sharedInstance] track:@"No variation triggered"properties:@{
                     @"revenue": @6000,
                 }];
             }

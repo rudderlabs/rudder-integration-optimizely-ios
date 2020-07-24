@@ -1,17 +1,17 @@
 //
-//  RudderOptimizelyFactory.h
-//  Pods-Rudder-Optimizely_Example
+//  RSOptimizelyFactory.h
+//  Pods-RS-Optimizely_Example
 //
 //  Created by Ruchira Moitra on 22/07/20.
 //
 
 #import <Foundation/Foundation.h>
-#import <Rudder/RudderIntegrationFactory.h>
+#import <Rudder/Rudder.h>
 #import <OptimizelySDKiOS/OptimizelySDKiOS.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface RudderOptimizelyFactory : NSObject<RudderIntegrationFactory>
+@interface RSOptimizelyFactory : NSObject<RSIntegrationFactory>
 
 + (instancetype)instanceWithOptimizely:(OPTLYManager *)optimizely;
 
