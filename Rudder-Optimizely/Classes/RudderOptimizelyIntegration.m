@@ -8,7 +8,7 @@
 #import "RudderOptimizelyIntegration.h"
 
 
-@implementation RSOptimizelyIntegration
+@implementation RudderOptimizelyIntegration
 
 #pragma mark - Initialization
 

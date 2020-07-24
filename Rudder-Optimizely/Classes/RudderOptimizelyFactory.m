@@ -9,13 +9,13 @@
 #import "RudderOptimizelyIntegration.h"
 
 
-@implementation RSOptimizelyFactory
+@implementation RudderOptimizelyFactory
 
 
 + (instancetype)instanceWithOptimizely:(OPTLYManager *)manager
 {
     static dispatch_once_t once;
-    static RSOptimizelyFactory *sharedInstance;
+    static RudderOptimizelyFactory *sharedInstance;
     dispatch_once(&once, ^{
         sharedInstance = [[self alloc] initWithOptimizely:manager];
     });
@@ -45,6 +45,6 @@
 - (nonnull id<RSIntegration>)initiate:(nonnull NSDictionary *)config client:(nonnull RSClient *)client rudderConfig:(nonnull RSConfig *)rudderConfig {
     [RSLogger logDebug:@"Creating RSIntegrationFactory"];
 
-    return [[RSOptimizelyIntegration alloc] initWithConfig:config andOptimizelyManager:self.manager withAnalytics:client withRSConfig:rudderConfig];
+    return [[RudderOptimizelyIntegration alloc] initWithConfig:config andOptimizelyManager:self.manager withAnalytics:client withRSConfig:rudderConfig];
 }
 @end

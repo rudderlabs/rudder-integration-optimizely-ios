@@ -14,50 +14,30 @@
 static NSString *DATA_PLANE_URL = @"https://2f7a352d.ngrok.io";
 static NSString *CONTROL_PLANE_URL = @"http://api.dev.rudderlabs.com";
 static NSString *WRITE_KEY = @"1f5BEV2kneYtZ3HkuwsGjd2JeZ1";
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    OPTLYLoggerDefault *optlyLogger = [[OPTLYLoggerDefault alloc] initWithLogLevel:OptimizelyLogLevelError];
-    // Initialize an Optimizely manager
-    //    self.optlyManager = [OPTLYManager init:^(OPTLYManagerBuilder *_Nullable builder) {
-    //        builder.projectId = @"18396880524";
-    //        builder.logger = optlyLogger;
-    //
-    //    }];
+    OPTLYLoggerDefault *optlyLogger = [[OPTLYLoggerDefault alloc] initWithLogLevel:OptimizelyLogLevelAll];
+
     self.optlyManager = [[OPTLYManager alloc] initWithBuilder:[OPTLYManagerBuilder  builderWithBlock:^(OPTLYManagerBuilder * _Nullable builder) {
         builder.sdkKey = @"LwrTQEYD9yReHwogKphdt";
         builder.logger = optlyLogger;
     }]];
-    //    self.optlyManager =  [OPTLYManager init:^(OPTLYManagerBuilder *_Nullable builder)  {
-    //      // Load the datafile from the bundle
-    //      NSString *filePath =[[NSBundle bundleForClass:[self class]]
-    //                           pathForResource:@"https://cdn.optimizely.com/datafiles/LwrTQEYD9yhdt.json"
-    //                           ofType:@"json"];
-    //      NSString *fileContents =[NSString stringWithContentsOfFile:filePath
-    //                               encoding:NSUTF8StringEncoding
-    //                               error:nil];
-    //      NSData *jsonData = [fileContents dataUsingEncoding:NSUTF8StringEncoding];
-    //
-    //      // Set the datafile in the builder
-    //      builder.datafile = jsonData;
-    //      builder.logger = optlyLogger;
-    //
-    //    }];
-    //
+
     RSConfigBuilder *builder = [[RSConfigBuilder alloc] init];
     [builder withDataPlaneUrl:DATA_PLANE_URL];
     [builder withControlPlaneUrl:CONTROL_PLANE_URL];
-    [builder withFactory:[RSOptimizelyFactory instanceWithOptimizely:self.optlyManager]];
-
+    [builder withFactory:[RudderOptimizelyFactory instanceWithOptimizely:self.optlyManager]];
     [builder withLoglevel:RSLogLevelDebug];
     [RSClient getInstance:WRITE_KEY config:[builder build]];
+    
+    
     [[RSClient sharedInstance] track:@"Testing if malformed"];
     [[RSClient sharedInstance] identify:@"test"];
     [[RSClient sharedInstance] track:@"Product Added" properties:@{
         @"revenue": @4000,
     }];
-
-
 
 
     // Test delayed initialization

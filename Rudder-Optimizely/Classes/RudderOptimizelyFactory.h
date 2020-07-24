@@ -11,7 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface RSOptimizelyFactory : NSObject<RSIntegrationFactory>
+@interface RudderOptimizelyFactory : NSObject<RSIntegrationFactory>
 
 + (instancetype)instanceWithOptimizely:(OPTLYManager *)optimizely;
 

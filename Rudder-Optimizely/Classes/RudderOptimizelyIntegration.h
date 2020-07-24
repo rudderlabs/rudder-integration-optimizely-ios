@@ -11,7 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface RSOptimizelyIntegration : NSObject<RSIntegration>
+@interface RudderOptimizelyIntegration : NSObject<RSIntegration>
 
 @property (nonatomic) BOOL sendEvents;
 
