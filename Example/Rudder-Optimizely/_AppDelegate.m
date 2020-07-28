@@ -13,7 +13,7 @@
 @implementation _AppDelegate
 static NSString *DATA_PLANE_URL = @"https://2f7a352d.ngrok.io";
 static NSString *CONTROL_PLANE_URL = @"http://api.dev.rudderlabs.com";
-static NSString *WRITE_KEY = @"1f5BEV2kneYtZ3HkuwsGjd2JeZ1";
+static NSString *WRITE_KEY = @"1fJRnIALnHt6WvJMMYRLIkWL4G6";
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -21,7 +21,7 @@ static NSString *WRITE_KEY = @"1f5BEV2kneYtZ3HkuwsGjd2JeZ1";
     OPTLYLoggerDefault *optlyLogger = [[OPTLYLoggerDefault alloc] initWithLogLevel:OptimizelyLogLevelAll];
 
     self.optlyManager = [[OPTLYManager alloc] initWithBuilder:[OPTLYManagerBuilder  builderWithBlock:^(OPTLYManagerBuilder * _Nullable builder) {
-        builder.sdkKey = @"LwrTQEYD9yReHwogKphdt";
+        builder.sdkKey = @"QTpKG3t3VJH6yuJn8rzq1";
         builder.logger = optlyLogger;
     }]];
 
@@ -48,8 +48,13 @@ static NSString *WRITE_KEY = @"1f5BEV2kneYtZ3HkuwsGjd2JeZ1";
         // Initialize an Optimizely client by asynchronously downloading the datafile
         [self.optlyManager initializeWithCallback:^(NSError *_Nullable error, OPTLYClient *_Nullable client) {
             // Activate user in an experiment
-            OPTLYVariation *variation = [client activate:@"testfeature_test" userId:@"test"];
+            OPTLYVariation *variation = [client activate:@"samplefeatureforrudder" userId:@"sajal_mohanta"];
+             OPTLYVariation *variation1 = [client activate:@"samplefeatureforrudder" userId:@"sajal_mohanta1"];
             [RSLogger logDebug:@"Inside variation"];
+             [[RSClient sharedInstance] identify:@"sajal_mohanta1"];
+            [[RSClient sharedInstance] track:@"Non tracking event" properties:@{
+                @"revenue": @8236376,
+            }];
             if ([variation.variationKey isEqualToString:@"variation_1"]) {
                 [RSLogger logDebug:@"Inside first if"];
                 [[RSClient sharedInstance] identify:@"test" traits:@{
@@ -57,20 +62,20 @@ static NSString *WRITE_KEY = @"1f5BEV2kneYtZ3HkuwsGjd2JeZ1";
                     @"company" : @"rudder",
                     @"name" : @"ruchira"
                 }];
-                [[RSClient sharedInstance] track:@"Product Added" properties:@{
+                [[RSClient sharedInstance] track:@"Event2" properties:@{
                     @"revenue": @8236376,
                 }];
-                [[RSClient sharedInstance] track:@"Product Removed" properties:@{
+                [[RSClient sharedInstance] track:@"level_up" properties:@{
                     @"revenue": @2378827,
                 }];
             } else if ([variation.variationKey isEqualToString:@"variation_2"]) {
                 [RSLogger logDebug:@"Inside second if"];
-                [[RSClient sharedInstance] identify:@"test"];
-                [[RSClient sharedInstance] track:@"Product Removed" properties:@{
+                [[RSClient sharedInstance] identify:@"sajal_mohanta"];
+                [[RSClient sharedInstance] track:@"Event2" properties:@{
                     @"revenue": @7000,
                 }];
             } else {
-                [[RSClient sharedInstance] track:@"No variation triggered"properties:@{
+                [[RSClient sharedInstance] track:@"Simple Track"properties:@{
                     @"revenue": @6000,
                 }];
             }
