@@ -9,7 +9,7 @@ Rudder is a platform for collecting, storing and routing customer event data to 
 Released under [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0)
 
 ## Getting Started with Optimizely Integration of Android SDK
-1. Add [Optimizely](http://optimizely.google.com) as a destination in the [Dashboard](https://app.rudderstack.com/).
+1. Add [Optimizely](https://optimizely.com) as a destination in the [Dashboard](https://app.rudderstack.com/).
 
 2. Rudder-Optimizely is available through [CocoaPods](https://cocoapods.org). To install it, add the following line to your Podfile and followed by `pod install`:
 
@@ -17,10 +17,8 @@ Released under [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0)
 pod 'Rudder-Optimizely'
 ```
 
-3. Download the `GoogleService-Info.plist` from your Optimizely console and put it in your Project.
-
-## Initialize ```RudderClient```
-Put this code in your ```AppDelegate.m``` file under the method ```didFinishLaunchingWithOptions```
+## Initialize `RudderClient`
+Put this code in your `AppDelegate.m` file under the method `didFinishLaunchingWithOptions`
 ```
 RSConfigBuilder *builder = [[RSConfigBuilder alloc] init];
 [builder withDataPlaneUrl:DATA_PLANE_URL];

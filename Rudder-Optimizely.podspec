@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'Rudder-Optimizely'
-  s.version          = '0.1.2-patch.1'
+  s.version          = '1.0.0'
   s.summary          = 'Privacy and Security focused Segment-alternative. Optimizely Native SDK integration support.'
 
   s.description      = <<-DESC
@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.homepage         = 'https://github.com/rudderlabs/rudder-integration-optimizely-ios'
   s.license          = { :type => "Apache", :file => "LICENSE" }
   s.author           = { 'RudderStack' => 'arnab@rudderlabs.com' }
-  s.source           = { :git => 'https://github.com/rudderlabs/rudder-integration-optimizely-ios.git' , :commit => 'db5155f9a4d43464039acf4d9bca0e0e05b33e34'}
+  s.source           = { :git => 'https://github.com/rudderlabs/rudder-integration-optimizely-ios.git' , :tag => 'v1.0.0'}
   s.platform         = :ios, "9.0"
   s.requires_arc = true
 
@@ -19,6 +19,6 @@ Pod::Spec.new do |s|
 
   s.static_framework = true
 
-  s.dependency 'Rudder', '~> 1.0.3'
+  s.dependency 'Rudder'
   s.dependency 'OptimizelySDKiOS', '~> 3.0.0'
 end
