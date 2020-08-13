@@ -22,7 +22,14 @@ Put this code in your `AppDelegate.m` file under the method `didFinishLaunchingW
 ```
 RSConfigBuilder *builder = [[RSConfigBuilder alloc] init];
 [builder withDataPlaneUrl:DATA_PLANE_URL];
-[builder withFactory:[RudderOptimizelyFactory instance]];
+// Setup optimizely logger.
+OPTLYLoggerDefault *optlyLogger = [[OPTLYLoggerDefault alloc] initWithLogLevel:OptimizelyLogLevelAll];
+// Create an Optimizely manager
+ self.optlyManager = [[OPTLYManager alloc] initWithBuilder:[OPTLYManagerBuilder  builderWithBlock:^(OPTLYManagerBuilder * _Nullable builder) {
+        builder.sdkKey = @<SDK KEY>;
+        builder.logger = optlyLogger;
+    }]];  
+[builder withFactory:[RudderOptimizelyFactory instanceWithOptimizely:self.optlyManager]];
 [builder withLoglevel:RSLogLevelDebug];
 [RSClient getInstance:WRITE_KEY config:[builder build]];
 ```
