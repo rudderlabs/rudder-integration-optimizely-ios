@@ -17,20 +17,21 @@ Released under [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0)
 pod 'Rudder-Optimizely'
 ```
 
-## Initialize `RudderClient`
+## Initialize `RSClient`
 Put this code in your `AppDelegate.m` file under the method `didFinishLaunchingWithOptions`
 ```
-RSConfigBuilder *builder = [[RSConfigBuilder alloc] init];
-[builder withDataPlaneUrl:DATA_PLANE_URL];
 // Setup optimizely logger.
 OPTLYLoggerDefault *optlyLogger = [[OPTLYLoggerDefault alloc] initWithLogLevel:OptimizelyLogLevelAll];
+
 // Create an Optimizely manager
- self.optlyManager = [[OPTLYManager alloc] initWithBuilder:[OPTLYManagerBuilder  builderWithBlock:^(OPTLYManagerBuilder * _Nullable builder) {
-        builder.sdkKey = @<SDK KEY>;
+self.optlyManager = [[OPTLYManager alloc] initWithBuilder:[OPTLYManagerBuilder  builderWithBlock:^(OPTLYManagerBuilder * _Nullable builder) {
+        builder.sdkKey = SDK_KEY;
         builder.logger = optlyLogger;
-    }]];  
+}]];
+
+RSConfigBuilder *builder = [[RSConfigBuilder alloc] init];
+[builder withDataPlaneUrl:DATA_PLANE_URL];
 [builder withFactory:[RudderOptimizelyFactory instanceWithOptimizely:self.optlyManager]];
-[builder withLoglevel:RSLogLevelDebug];
 [RSClient getInstance:WRITE_KEY config:[builder build]];
 ```
 
