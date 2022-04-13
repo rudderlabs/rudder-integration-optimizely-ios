@@ -13,12 +13,12 @@ Pod::Spec.new do |s|
   s.platform         = :ios, "9.0"
   s.requires_arc = true
 
-  s.ios.deployment_target = '9.0'
+  s.ios.deployment_target = '8.0'
 
   s.source_files = 'Rudder-Optimizely/Classes/**/*'
 
   s.static_framework = true
 
   s.dependency 'Rudder', '~> 1.0'
-  s.dependency 'OptimizelySDKiOS', '~> 1.1.9'
+  s.dependency 'OptimizelySDKiOS', '2.1.0'
 end
