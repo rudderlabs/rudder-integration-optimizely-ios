@@ -81,6 +81,11 @@
     }
 }
 
+- (void)flush {
+    // Flush call is not supported.
+}
+
+
 - (void)trackEvent:(RSMessage *)message
 {
     OPTLYClient *client = [self.manager getOptimizely];
