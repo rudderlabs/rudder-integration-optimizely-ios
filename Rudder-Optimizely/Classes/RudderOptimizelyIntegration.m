@@ -104,16 +104,14 @@
             [client track:message.event userId:self.userId eventTags:message.properties];
             [RSLogger logDebug:[[NSString alloc] initWithFormat:@"RS Optimizely track:%@, userId:%@, eventTags:%@", message.event,self.userId,message.properties]];
         }
+    }
 
-
-        if (!trackKnownUsers && self.userTraits.count > 0) {
-            [client track:message.event userId:message.anonymousId attributes:self.userTraits eventTags:message.properties];
-            [RSLogger logDebug:[[NSString alloc] initWithFormat:@"RS Optimizely track:%@, userId:%@, attributes:%@, eventTags:%@", message.event,message.anonymousId,self.userTraits,message.properties]];
-        } else {
-            [client track:message.event userId:message.anonymousId eventTags:message.properties];
-            [RSLogger logDebug:[[NSString alloc] initWithFormat:@"RS Optimizely track:%@, userId:%@, eventTags:%@", message.event,message.anonymousId,message.properties]];
-
-        }
+    if (!trackKnownUsers && self.userTraits.count > 0) {
+        [client track:message.event userId:message.anonymousId attributes:self.userTraits eventTags:message.properties];
+        [RSLogger logDebug:[[NSString alloc] initWithFormat:@"RS Optimizely track:%@, userId:%@, attributes:%@, eventTags:%@", message.event,message.anonymousId,self.userTraits,message.properties]];
+    } else {
+        [client track:message.event userId:message.anonymousId eventTags:message.properties];
+        [RSLogger logDebug:[[NSString alloc] initWithFormat:@"RS Optimizely track:%@, userId:%@, eventTags:%@", message.event,message.anonymousId,message.properties]];
     }
 }
 
