@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		015BDE3E11E49510E4DA6A6F /* Pods_Rudder_Optimizely_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38029A9FE8A5618C2E49263F /* Pods_Rudder_Optimizely_Example.framework */; };
-		317DF8D8F807FF1CCEEFE65A /* Pods_Rudder_Optimizely_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 334E0C5C4BEEFFE76091DF96 /* Pods_Rudder_Optimizely_Tests.framework */; };
+		149F0AAE606D37C65EDA4BA4 /* libPods-Rudder-Optimizely_Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E8AC9EAA25D237FF68137B6E /* libPods-Rudder-Optimizely_Tests.a */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -24,6 +23,7 @@
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
+		D51EFED1025C372633BD00F6 /* libPods-Rudder-Optimizely_Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 21024729A3348A6C78F29AC2 /* libPods-Rudder-Optimizely_Example.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,9 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		334E0C5C4BEEFFE76091DF96 /* Pods_Rudder_Optimizely_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rudder_Optimizely_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		38029A9FE8A5618C2E49263F /* Pods_Rudder_Optimizely_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rudder_Optimizely_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3C1D92439341545C96069C16 /* Pods-Rudder-Optimizely_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rudder-Optimizely_Tests.debug.xcconfig"; path = "Target Support Files/Pods-Rudder-Optimizely_Tests/Pods-Rudder-Optimizely_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		21024729A3348A6C78F29AC2 /* libPods-Rudder-Optimizely_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Rudder-Optimizely_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		365199002B2DA1AFDF9B68E2 /* Pods-Rudder-Optimizely_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rudder-Optimizely_Example.release.xcconfig"; path = "Target Support Files/Pods-Rudder-Optimizely_Example/Pods-Rudder-Optimizely_Example.release.xcconfig"; sourceTree = "<group>"; };
 		3FF40E3204E3F4CF5CC84EAE /* Rudder-Optimizely.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = "Rudder-Optimizely.podspec"; path = "../Rudder-Optimizely.podspec"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		44316FFECA27E874807A59C0 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* Rudder-Optimizely_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rudder-Optimizely_Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -61,12 +60,13 @@
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
+		704DDB88F0950D5B6E0198E8 /* Pods-Rudder-Optimizely_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rudder-Optimizely_Tests.debug.xcconfig"; path = "Target Support Files/Pods-Rudder-Optimizely_Tests/Pods-Rudder-Optimizely_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		83CA67B4AFF3FE25400DE355 /* Pods-Rudder-Optimizely_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rudder-Optimizely_Example.debug.xcconfig"; path = "Target Support Files/Pods-Rudder-Optimizely_Example/Pods-Rudder-Optimizely_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		995A6942E47F70B5338FFE33 /* Pods-Rudder-Optimizely_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rudder-Optimizely_Tests.release.xcconfig"; path = "Target Support Files/Pods-Rudder-Optimizely_Tests/Pods-Rudder-Optimizely_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		9A12CEC7EB41CEDFA0547D34 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		E00B9F246E06075A1EE87D52 /* Pods-Rudder-Optimizely_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rudder-Optimizely_Example.release.xcconfig"; path = "Target Support Files/Pods-Rudder-Optimizely_Example/Pods-Rudder-Optimizely_Example.release.xcconfig"; sourceTree = "<group>"; };
+		9C5BDD5FA73EEF93C2FCD473 /* Pods-Rudder-Optimizely_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rudder-Optimizely_Tests.release.xcconfig"; path = "Target Support Files/Pods-Rudder-Optimizely_Tests/Pods-Rudder-Optimizely_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		C8077DA7B517D594D748103B /* Pods-Rudder-Optimizely_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rudder-Optimizely_Example.debug.xcconfig"; path = "Target Support Files/Pods-Rudder-Optimizely_Example/Pods-Rudder-Optimizely_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		E8AC9EAA25D237FF68137B6E /* libPods-Rudder-Optimizely_Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Rudder-Optimizely_Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,7 +77,7 @@
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
-				015BDE3E11E49510E4DA6A6F /* Pods_Rudder_Optimizely_Example.framework in Frameworks */,
+				D51EFED1025C372633BD00F6 /* libPods-Rudder-Optimizely_Example.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,7 +88,7 @@
 				6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */,
 				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
-				317DF8D8F807FF1CCEEFE65A /* Pods_Rudder_Optimizely_Tests.framework in Frameworks */,
+				149F0AAE606D37C65EDA4BA4 /* libPods-Rudder-Optimizely_Tests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,8 +123,8 @@
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
 				6003F5AF195388D20070C39A /* XCTest.framework */,
-				38029A9FE8A5618C2E49263F /* Pods_Rudder_Optimizely_Example.framework */,
-				334E0C5C4BEEFFE76091DF96 /* Pods_Rudder_Optimizely_Tests.framework */,
+				21024729A3348A6C78F29AC2 /* libPods-Rudder-Optimizely_Example.a */,
+				E8AC9EAA25D237FF68137B6E /* libPods-Rudder-Optimizely_Tests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -188,10 +188,10 @@
 		A32B149BCECF16F08B384FD1 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				83CA67B4AFF3FE25400DE355 /* Pods-Rudder-Optimizely_Example.debug.xcconfig */,
-				E00B9F246E06075A1EE87D52 /* Pods-Rudder-Optimizely_Example.release.xcconfig */,
-				3C1D92439341545C96069C16 /* Pods-Rudder-Optimizely_Tests.debug.xcconfig */,
-				995A6942E47F70B5338FFE33 /* Pods-Rudder-Optimizely_Tests.release.xcconfig */,
+				C8077DA7B517D594D748103B /* Pods-Rudder-Optimizely_Example.debug.xcconfig */,
+				365199002B2DA1AFDF9B68E2 /* Pods-Rudder-Optimizely_Example.release.xcconfig */,
+				704DDB88F0950D5B6E0198E8 /* Pods-Rudder-Optimizely_Tests.debug.xcconfig */,
+				9C5BDD5FA73EEF93C2FCD473 /* Pods-Rudder-Optimizely_Tests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -203,11 +203,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6003F5BF195388D20070C39A /* Build configuration list for PBXNativeTarget "Rudder-Optimizely_Example" */;
 			buildPhases = (
-				523FEFE3D9EEB9B9EF79981B /* [CP] Check Pods Manifest.lock */,
+				724D473FCF1FF55FD42AA7E0 /* [CP] Check Pods Manifest.lock */,
 				6003F586195388D20070C39A /* Sources */,
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
-				FD527AADCF89A2649E03E10E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -222,7 +221,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6003F5C2195388D20070C39A /* Build configuration list for PBXNativeTarget "Rudder-Optimizely_Tests" */;
 			buildPhases = (
-				98D7DCB0FDDB4B05098933B7 /* [CP] Check Pods Manifest.lock */,
+				4D2959F2A37EB1ED2E92ECD5 /* [CP] Check Pods Manifest.lock */,
 				6003F5AA195388D20070C39A /* Sources */,
 				6003F5AB195388D20070C39A /* Frameworks */,
 				6003F5AC195388D20070C39A /* Resources */,
@@ -295,29 +294,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		523FEFE3D9EEB9B9EF79981B /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Rudder-Optimizely_Example-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		98D7DCB0FDDB4B05098933B7 /* [CP] Check Pods Manifest.lock */ = {
+		4D2959F2A37EB1ED2E92ECD5 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -339,34 +316,26 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		FD527AADCF89A2649E03E10E /* [CP] Embed Pods Frameworks */ = {
+		724D473FCF1FF55FD42AA7E0 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Rudder-Optimizely_Example/Pods-Rudder-Optimizely_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/OptimizelySDKCore/OptimizelySDKCore.framework",
-				"${BUILT_PRODUCTS_DIR}/OptimizelySDKDatafileManager/OptimizelySDKDatafileManager.framework",
-				"${BUILT_PRODUCTS_DIR}/OptimizelySDKEventDispatcher/OptimizelySDKEventDispatcher.framework",
-				"${BUILT_PRODUCTS_DIR}/OptimizelySDKShared/OptimizelySDKShared.framework",
-				"${BUILT_PRODUCTS_DIR}/OptimizelySDKUserProfileService/OptimizelySDKUserProfileService.framework",
-				"${BUILT_PRODUCTS_DIR}/OptimizelySDKiOS/OptimizelySDKiOS.framework",
-				"${BUILT_PRODUCTS_DIR}/Rudder/Rudder.framework",
+			inputFileListPaths = (
 			);
-			name = "[CP] Embed Pods Frameworks";
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OptimizelySDKCore.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OptimizelySDKDatafileManager.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OptimizelySDKEventDispatcher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OptimizelySDKShared.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OptimizelySDKUserProfileService.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OptimizelySDKiOS.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rudder.framework",
+				"$(DERIVED_FILE_DIR)/Pods-Rudder-Optimizely_Example-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Rudder-Optimizely_Example/Pods-Rudder-Optimizely_Example-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -503,7 +472,7 @@
 		};
 		6003F5C0195388D20070C39A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 83CA67B4AFF3FE25400DE355 /* Pods-Rudder-Optimizely_Example.debug.xcconfig */;
+			baseConfigurationReference = C8077DA7B517D594D748103B /* Pods-Rudder-Optimizely_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -519,7 +488,7 @@
 		};
 		6003F5C1195388D20070C39A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E00B9F246E06075A1EE87D52 /* Pods-Rudder-Optimizely_Example.release.xcconfig */;
+			baseConfigurationReference = 365199002B2DA1AFDF9B68E2 /* Pods-Rudder-Optimizely_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -535,7 +504,7 @@
 		};
 		6003F5C3195388D20070C39A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3C1D92439341545C96069C16 /* Pods-Rudder-Optimizely_Tests.debug.xcconfig */;
+			baseConfigurationReference = 704DDB88F0950D5B6E0198E8 /* Pods-Rudder-Optimizely_Tests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -560,7 +529,7 @@
 		};
 		6003F5C4195388D20070C39A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 995A6942E47F70B5338FFE33 /* Pods-Rudder-Optimizely_Tests.release.xcconfig */;
+			baseConfigurationReference = 9C5BDD5FA73EEF93C2FCD473 /* Pods-Rudder-Optimizely_Tests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (

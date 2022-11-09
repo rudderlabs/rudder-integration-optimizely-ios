@@ -23,6 +23,6 @@ Pod::Spec.new do |s|
 
   s.static_framework = true
 
-  s.dependency 'Rudder'
+  s.dependency 'Rudder', '~> 1.0'
   s.dependency 'OptimizelySDKiOS', '3.0.2'
 end
