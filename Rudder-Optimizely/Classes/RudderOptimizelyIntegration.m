@@ -19,14 +19,9 @@
         self.manager = manager;
         self.client = client;
         self.backgroundQueue = dispatch_queue_create("RS Optimizely Background Queue ", NULL);
-
+        
         if ([[self.config objectForKey:@"listen"] boolValue]) {
-            self.observer = [[NSNotificationCenter defaultCenter] addObserverForName:@"Notification for optimizely"
-                                                                              object:nil
-                                                                               queue:nil
-                                                                          usingBlock:^(NSNotification *_Nonnull note) {
-                [self experimentDidGetViewed:note];
-            }];
+            [self experimentDidGetViewed];
         }
     }
 
@@ -117,24 +112,22 @@
 
 #pragma mark experiment viewed
 
-- (void)experimentDidGetViewed:(NSNotification *)notification
-{
-    OPTLYExperiment *experiment = notification.userInfo[OptimizelyNotificationsUserDictionaryExperimentKey];
-    OPTLYVariation *variation = notification.userInfo[OptimizelyNotificationsUserDictionaryVariationKey];
+- (void)experimentDidGetViewed {
+    [[[self.manager getOptimizely] notificationCenter] addActivateNotificationListener:^(OPTLYExperiment * _Nonnull experiment, NSString * _Nonnull userId, NSDictionary<NSString *,id> * _Nullable attributes, OPTLYVariation * _Nonnull variation, NSDictionary<NSString *,id> * _Nonnull event) {
+        NSMutableDictionary *properties = [[NSMutableDictionary alloc] init];
+        properties[@"experimentId"] = [experiment experimentId];
+        properties[@"experimentName"] = [experiment experimentKey];
+        properties[@"variationId"] = [variation variationId];
+        properties[@"variationName"] = [variation variationKey];
 
-    NSMutableDictionary *properties = [[NSMutableDictionary alloc] init];
-    properties[@"experimentId"] = [experiment experimentId];
-    properties[@"experimentName"] = [experiment experimentKey];
-    properties[@"variationId"] = [variation variationId];
-    properties[@"variationName"] = [variation variationKey];
+        if ([(NSNumber *)[self.config objectForKey:@"nonInteraction"] boolValue]) {
+            properties[@"nonInteraction"] = @1;
+        }
 
-    if ([(NSNumber *)[self.config objectForKey:@"nonInteraction"] boolValue]) {
-        properties[@"nonInteraction"] = @1;
-    }
-
-    // Trigger event as per our spec
-    // NSDictionary *integrations = [[NSDictionary alloc] initWithObjectsAndKeys:@"false", @"OptimizelyFullStack", nil];
-    [self.client track:@"Experiment Viewed" properties:properties]; //need to add options
+        // Trigger event as per our spec
+        // NSDictionary *integrations = [[NSDictionary alloc] initWithObjectsAndKeys:@"false", @"OptimizelyFullStack", nil];
+        [self.client track:@"Experiment Viewed" properties:properties]; //need to add options
+    }];
 }
 
 
