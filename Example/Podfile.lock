@@ -1,0 +1,54 @@
+PODS:
+  - OptimizelySDKCore (3.1.5)
+  - OptimizelySDKDatafileManager (3.1.5):
+    - OptimizelySDKCore (= 3.1.5)
+    - OptimizelySDKShared (= 3.1.5)
+  - OptimizelySDKEventDispatcher (3.1.5):
+    - OptimizelySDKCore (= 3.1.5)
+    - OptimizelySDKShared (= 3.1.5)
+  - OptimizelySDKiOS (3.1.5):
+    - OptimizelySDKCore (= 3.1.5)
+    - OptimizelySDKDatafileManager (= 3.1.5)
+    - OptimizelySDKEventDispatcher (= 3.1.5)
+    - OptimizelySDKShared (= 3.1.5)
+    - OptimizelySDKUserProfileService (= 3.1.5)
+  - OptimizelySDKShared (3.1.5):
+    - OptimizelySDKCore (= 3.1.5)
+  - OptimizelySDKUserProfileService (3.1.5):
+    - OptimizelySDKCore (= 3.1.5)
+    - OptimizelySDKShared (= 3.1.5)
+  - Rudder (1.7.1)
+  - Rudder-Optimizely (1.0.1):
+    - OptimizelySDKiOS (= 3.1.5)
+    - Rudder (~> 1.0)
+
+DEPENDENCIES:
+  - Rudder-Optimizely (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - OptimizelySDKCore
+    - OptimizelySDKDatafileManager
+    - OptimizelySDKEventDispatcher
+    - OptimizelySDKiOS
+    - OptimizelySDKShared
+    - OptimizelySDKUserProfileService
+    - Rudder
+
+EXTERNAL SOURCES:
+  Rudder-Optimizely:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  OptimizelySDKCore: c20c9e903d8d9330eafb6171ea938164d806451d
+  OptimizelySDKDatafileManager: 6a8228ca2daad92c7350e35f480aead19ca2a99d
+  OptimizelySDKEventDispatcher: a1580c4fefb81d765d4f5ea0dedc812dbd9d4270
+  OptimizelySDKiOS: 45b4e25f55c5006e6a38465277261561e0ab8fe1
+  OptimizelySDKShared: 3068b91286c0957bfff4050119221adf15bbea3a
+  OptimizelySDKUserProfileService: 9887eeeeff2146d4cc1905c35e4d252e5813d8c0
+  Rudder: 61568212171ddc2efe7785d0a6a0de589d181370
+  Rudder-Optimizely: e9be483bbff4115c46b1a26c9c760b36fc2878c7
+
+PODFILE CHECKSUM: 5006a4ae2ead0fe16156f7f1f56f771d052fd6db
+
+COCOAPODS: 1.11.3
