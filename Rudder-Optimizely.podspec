@@ -1,6 +1,10 @@
+require 'json'
+
+package = JSON.parse(File.read(File.join(__dir__, 'package.json')))
+
 Pod::Spec.new do |s|
   s.name             = 'Rudder-Optimizely'
-  s.version          = '1.0.0'
+  s.version          = package['version']
   s.summary          = 'Privacy and Security focused Segment-alternative. Optimizely Native SDK integration support.'
 
   s.description      = <<-DESC
@@ -9,16 +13,16 @@ Pod::Spec.new do |s|
   s.homepage         = 'https://github.com/rudderlabs/rudder-integration-optimizely-ios'
   s.license          = { :type => "Apache", :file => "LICENSE" }
   s.author           = { 'RudderStack' => 'arnab@rudderlabs.com' }
-  s.source           = { :git => 'https://github.com/rudderlabs/rudder-integration-optimizely-ios.git' , :tag => 'v1.0.0'}
+  s.source           = { :git => 'https://github.com/rudderlabs/rudder-integration-optimizely-ios.git' , :tag => "v#{s.version}" }
   s.platform         = :ios, "9.0"
   s.requires_arc = true
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '9.0'
 
   s.source_files = 'Rudder-Optimizely/Classes/**/*'
 
   s.static_framework = true
 
-  s.dependency 'Rudder'
-  s.dependency 'OptimizelySDKiOS'
+  s.dependency 'Rudder', '~> 1.0'
+  s.dependency 'OptimizelySDKiOS', '3.1.5'
 end

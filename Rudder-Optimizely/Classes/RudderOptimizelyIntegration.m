@@ -19,14 +19,9 @@
         self.manager = manager;
         self.client = client;
         self.backgroundQueue = dispatch_queue_create("RS Optimizely Background Queue ", NULL);
-
+        
         if ([[self.config objectForKey:@"listen"] boolValue]) {
-            self.observer = [[NSNotificationCenter defaultCenter] addObserverForName:@"Notification for optimizely"
-                                                                              object:nil
-                                                                               queue:nil
-                                                                          usingBlock:^(NSNotification *_Nonnull note) {
-                [self experimentDidGetViewed:note];
-            }];
+            [self experimentDidGetViewed];
         }
     }
 
@@ -81,6 +76,11 @@
     }
 }
 
+- (void)flush {
+    // Flush call is not supported.
+}
+
+
 - (void)trackEvent:(RSMessage *)message
 {
     OPTLYClient *client = [self.manager getOptimizely];
@@ -99,39 +99,35 @@
             [client track:message.event userId:self.userId eventTags:message.properties];
             [RSLogger logDebug:[[NSString alloc] initWithFormat:@"RS Optimizely track:%@, userId:%@, eventTags:%@", message.event,self.userId,message.properties]];
         }
+    }
 
-
-        if (!trackKnownUsers && self.userTraits.count > 0) {
-            [client track:message.event userId:message.anonymousId attributes:self.userTraits eventTags:message.properties];
-            [RSLogger logDebug:[[NSString alloc] initWithFormat:@"RS Optimizely track:%@, userId:%@, attributes:%@, eventTags:%@", message.event,message.anonymousId,self.userTraits,message.properties]];
-        } else {
-            [client track:message.event userId:message.anonymousId eventTags:message.properties];
-            [RSLogger logDebug:[[NSString alloc] initWithFormat:@"RS Optimizely track:%@, userId:%@, eventTags:%@", message.event,message.anonymousId,message.properties]];
-
-        }
+    if (!trackKnownUsers && self.userTraits.count > 0) {
+        [client track:message.event userId:message.anonymousId attributes:self.userTraits eventTags:message.properties];
+        [RSLogger logDebug:[[NSString alloc] initWithFormat:@"RS Optimizely track:%@, userId:%@, attributes:%@, eventTags:%@", message.event,message.anonymousId,self.userTraits,message.properties]];
+    } else {
+        [client track:message.event userId:message.anonymousId eventTags:message.properties];
+        [RSLogger logDebug:[[NSString alloc] initWithFormat:@"RS Optimizely track:%@, userId:%@, eventTags:%@", message.event,message.anonymousId,message.properties]];
     }
 }
 
 #pragma mark experiment viewed
 
-- (void)experimentDidGetViewed:(NSNotification *)notification
-{
-    OPTLYExperiment *experiment = notification.userInfo[OptimizelyNotificationsUserDictionaryExperimentKey];
-    OPTLYVariation *variation = notification.userInfo[OptimizelyNotificationsUserDictionaryVariationKey];
+- (void)experimentDidGetViewed {
+    [[[self.manager getOptimizely] notificationCenter] addActivateNotificationListener:^(OPTLYExperiment * _Nonnull experiment, NSString * _Nonnull userId, NSDictionary<NSString *,id> * _Nullable attributes, OPTLYVariation * _Nonnull variation, NSDictionary<NSString *,id> * _Nonnull event) {
+        NSMutableDictionary *properties = [[NSMutableDictionary alloc] init];
+        properties[@"experimentId"] = [experiment experimentId];
+        properties[@"experimentName"] = [experiment experimentKey];
+        properties[@"variationId"] = [variation variationId];
+        properties[@"variationName"] = [variation variationKey];
 
-    NSMutableDictionary *properties = [[NSMutableDictionary alloc] init];
-    properties[@"experimentId"] = [experiment experimentId];
-    properties[@"experimentName"] = [experiment experimentKey];
-    properties[@"variationId"] = [variation variationId];
-    properties[@"variationName"] = [variation variationKey];
+        if ([(NSNumber *)[self.config objectForKey:@"nonInteraction"] boolValue]) {
+            properties[@"nonInteraction"] = @1;
+        }
 
-    if ([(NSNumber *)[self.config objectForKey:@"nonInteraction"] boolValue]) {
-        properties[@"nonInteraction"] = @1;
-    }
-
-    // Trigger event as per our spec
-    // NSDictionary *integrations = [[NSDictionary alloc] initWithObjectsAndKeys:@"false", @"OptimizelyFullStack", nil];
-    [self.client track:@"Experiment Viewed" properties:properties]; //need to add options
+        // Trigger event as per our spec
+        // NSDictionary *integrations = [[NSDictionary alloc] initWithObjectsAndKeys:@"false", @"OptimizelyFullStack", nil];
+        [self.client track:@"Experiment Viewed" properties:properties]; //need to add options
+    }];
 }
 
 
