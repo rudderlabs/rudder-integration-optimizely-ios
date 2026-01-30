@@ -73,7 +73,7 @@ jobs:
         env:
           GH_TOKEN: ${{ steps.generate-token.outputs.token }}
         run: |
-          BASE_SHA=$(git rev-parse HEAD)
+          BASE_SHA=$(git rev-parse origin/master)
           gh api repos/${{ github.repository }}/git/refs \
             --method POST \
             -f ref="refs/heads/${{ steps.create-release.outputs.branch_name }}" \
